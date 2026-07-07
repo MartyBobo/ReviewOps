@@ -1,1 +1,35 @@
-Docs/
+/Docs/
+!/docs/
+!/docs/**
+
+# .NET build output
+bin/
+obj/
+TestResults/
+coverage/
+*.coverage
+*.coveragexml
+
+# User and IDE state
+.vs/
+.vscode/
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+
+# Local certificates and secrets
+*.pfx
+*.p12
+*.key
+*.pem
+secrets.json
+
+# Docker/local data
+docker-data/
+.docker/
