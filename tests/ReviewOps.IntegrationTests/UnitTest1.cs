@@ -1,4 +1,4 @@
-﻿namespace ReviewOps.IntegrationTests;
+namespace ReviewOps.IntegrationTests;
 
 public class UnitTest1
 {
