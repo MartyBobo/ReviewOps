@@ -1,6 +1,6 @@
 namespace ReviewOps.Worker;
 
-public class Worker(ILogger<Worker> logger) : BackgroundService
+public sealed partial class Worker(ILogger<Worker> logger) : BackgroundService
 {
     protected override async Task ExecuteAsync(CancellationToken stoppingToken)
     {
@@ -8,9 +8,13 @@ public class Worker(ILogger<Worker> logger) : BackgroundService
         {
             if (logger.IsEnabled(LogLevel.Information))
             {
-                logger.LogInformation("Worker running at: {time}", DateTimeOffset.Now);
+                LogWorkerRunning(logger, DateTimeOffset.UtcNow);
             }
+
             await Task.Delay(1000, stoppingToken);
         }
     }
+
+    [LoggerMessage(EventId = 1, Level = LogLevel.Information, Message = "Worker running at: {Timestamp}")]
+    private static partial void LogWorkerRunning(ILogger logger, DateTimeOffset timestamp);
 }
