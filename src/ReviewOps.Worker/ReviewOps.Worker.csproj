@@ -1,0 +1,19 @@
+<Project Sdk="Microsoft.NET.Sdk.Worker">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <UserSecretsId>dotnet-ReviewOps.Worker-78216ec0-dbf3-4b98-bed1-b8eee86cba1e</UserSecretsId>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Hosting" Version="10.0.9" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReviewOps.Application\ReviewOps.Application.csproj" />
+    <ProjectReference Include="..\ReviewOps.Infrastructure\ReviewOps.Infrastructure.csproj" />
+    <ProjectReference Include="..\ReviewOps.Contracts\ReviewOps.Contracts.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ReviewOps.Application\ReviewOps.Application.csproj" />
+    <ProjectReference Include="..\ReviewOps.Infrastructure\ReviewOps.Infrastructure.csproj" />
+    <ProjectReference Include="..\ReviewOps.Contracts\ReviewOps.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
